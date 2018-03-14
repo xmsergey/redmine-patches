@@ -8,3 +8,7 @@ Redmine::Plugin.register 'redmine-patches' do
   version '0.0.1'
   url 'https://redmine.plansource.com/plugins/redmine-patches'
 end
+
+ActionDispatch::Callbacks.to_prepare do
+  require_dependency 'overrides/redmine_tags_override' if Redmine::Plugin.installed?(:redmineup_tags) && Redmine::Plugin.find(:redmineup_tags).version == '2.0.1'
+end

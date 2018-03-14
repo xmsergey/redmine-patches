@@ -6,8 +6,9 @@ Redmine patches Plugin.This plugin contains fixes for redmine.
 2. Put them in redmine\plugins directory
 
 ## Fixes:
-1. Updated CSS for dropdowns on filter block.
-2. Fixed 'tags' column when exporting tickets to CSV.
+- Updated CSS for dropdowns on filter block.
+- Fixed 'tags' column when exporting tickets to CSV.
+- Fixed 'Redmineup tags' plugin to save history of tags changes.
 
 ## Useful links
 1. How to override Redmine views: http://www.redmine.org/boards/3/topics/33949
