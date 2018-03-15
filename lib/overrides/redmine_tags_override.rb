@@ -16,7 +16,7 @@ module RedminePatches
 
         if params && params[:issue] && !params[:issue][:tag_list].nil?
           old_value = Issue.find_by(id: context[:issue].id)
-          old_tags = old_value.tag_list if old_value
+          old_tags = old_value.try(:tag_list).to_s
 
           context[:issue].tag_list = params[:issue][:tag_list]
           new_tags = context[:issue].tag_list.to_s
