@@ -11,5 +11,8 @@ Redmine::Plugin.register 'redmine-patches' do
 end
 
 ActionDispatch::Callbacks.to_prepare do
-  require_dependency 'overrides/redmine_tags_override' if Redmine::Plugin.installed?(:redmineup_tags) && Redmine::Plugin.find(:redmineup_tags).version == '2.0.1'
+  if Redmine::Plugin.installed?(:redmineup_tags) && Redmine::Plugin.find(:redmineup_tags).version == '2.0.1'
+    require_dependency 'overrides/redmine_tags_override'
+    require_dependency 'overrides/application_helper_override'
+  end
 end
