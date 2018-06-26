@@ -10,6 +10,7 @@ Redmine patches Plugin.This plugin contains fixes for redmine.
 2. Task #109519. Fixed 'tags' column when exporting tickets to CSV.
 3. Task #110311. Fixed 'Redmineup tags' plugin to save history of tags changes.
 4. Task #111327. Fixed bug when filtered parameter has 'date' type of db column.
+5. Task #115651. Fixed bug when filter by Tags worked incorrectly.
 
 ## Useful links
 1. How to override Redmine views: http://www.redmine.org/boards/3/topics/33949
