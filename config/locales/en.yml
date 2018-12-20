@@ -1,0 +1,9 @@
+# English strings go here for Rails i18n
+en:
+  activerecord:
+    errors:
+      models:
+        time_entry:
+          attributes:
+            base:
+              changes_are_restricted_for_that_date: 'Adding, Removing and Changing the time is restricted for the Date %{date}'
