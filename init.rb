@@ -1,6 +1,7 @@
 require 'redmine_patches'
 require 'overrides/queries_helper_override'
 require 'overrides/query_override'
+require 'overrides/time_entry_override'
 
 Redmine::Plugin.register 'redmine-patches' do
   name 'Redmine Patches'
