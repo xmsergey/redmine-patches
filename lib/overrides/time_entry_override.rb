@@ -33,7 +33,8 @@ module RedminePatches
 
         log_time_entry_period = 0
         user_groups.each do |group|
-          group_log_time_entry_period = group.custom_field_values.select { |value| value.custom_field.name == 'LogTime Edit Period' }.first&.value&.to_i
+          first_period = group.custom_field_values.select { |value| value.custom_field.name == 'LogTime Edit Period' }.first
+          group_log_time_entry_period = first_period && first_period.value && first_period.value.to_i
           log_time_entry_period = [log_time_entry_period, group_log_time_entry_period].max
         end
         log_time_entry_period || 0
