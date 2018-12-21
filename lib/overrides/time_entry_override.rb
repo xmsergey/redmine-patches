@@ -24,7 +24,8 @@ module RedminePatches
 
       def validate_time_entry_with_fix
         validate_time_entry_without_fix
-        errors.add :base, :changes_are_restricted_for_that_date, date: spent_on if user.present? && !editable_by_with_fix?(user)
+        validate_user = User.current
+        errors.add :base, :changes_are_restricted_for_that_date, date: spent_on if validate_user.present? && !editable_by_with_fix?(validate_user)
       end
 
       def time_entry_edit_period(usr)
